@@ -1,7 +1,7 @@
 export default async function Reviews({
   params,
 }: {
-  params: Promise<{ productId: String }>;
+  params: Promise<{ productId: string }>;
 }) {
   const productId = (await params).productId;
   return (

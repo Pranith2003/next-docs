@@ -13,6 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <nav className="flex bg-gray-200 p-4">
+          <p className="flex-1 ">This is Nav Bar</p>
+          <ActiveLinks />
+        </nav>
         <div
           style={{
             minHeight: "100vh",
@@ -20,7 +24,6 @@ export default function RootLayout({
             boxSizing: "border-box",
           }}
         >
-          <ActiveLinks />
           {children}
         </div>
         <footer

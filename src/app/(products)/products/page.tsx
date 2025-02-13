@@ -1,7 +1,12 @@
 import Link from "next/link";
 
-export default function Products() {
+export default async function Products() {
   const productId: number[] = [8, 9, 10];
+  await new Promise((reslove) => {
+    setTimeout(() => {
+      reslove("Intentional Delay");
+    }, 2000);
+  });
   return (
     <>
       <Link href="/">Home</Link>

@@ -3,7 +3,7 @@ export default async function Docs({
 }: {
   params: Promise<{ pageUrl: string[] }>;
 }) {
-  console.log(params);
+  // console.log(params);
   const { pageUrl } = await params;
 
   if (pageUrl?.length === 2) {

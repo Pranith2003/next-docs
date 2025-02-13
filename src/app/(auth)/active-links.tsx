@@ -19,13 +19,7 @@ export const ActiveLinks = () => {
   const pathname = usePathname(); // Get current URL path
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
-      }}
-    >
+    <div className="flex flex-row gap-12 justify-center">
       {navLinks.map((element) => {
         const isActive =
           pathname === element.link ||

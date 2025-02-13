@@ -5,10 +5,14 @@ export const metadata: Metadata = {
   title: "Blogs",
 };
 
-export default function Blog() {
+export default async function Blog() {
+  await new Promise((reslove) => {
+    setTimeout(() => {
+      reslove("Intentional Delay");
+    }, 2000);
+  });
   return (
     <>
-      <Link href="/">Home</Link>
       <h1>Blog</h1>
     </>
   );

@@ -2,12 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 const navLinks = [
   { id: 1, href: "/products", title: "Products" },
   { id: 2, href: "/blog", title: "Blog" },
   { id: 3, href: "/order-products", title: "Orders" },
-  { id: 4, href: "/register", title: "Get Started" },
+  // { id: 4, href: "/products/1/review", title: "Reviews" },
+  { id: 5, href: "/register", title: "Get Started" },
 ];
+
+export const HandleClick = () => {
+  const router = useRouter();
+
+  return (
+    <>
+      <button
+        onClick={() => {
+          router.push("/complex-dashboard");
+        }}
+      >
+        DashBoard 2.0
+      </button>
+    </>
+  );
+};
 
 export const NavLinks = () => {
   const pathname = usePathname();

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./global.css";
 import Link from "next/link";
 import { NavLinks } from "./navlinks";
+import { Menu } from "lucide-react";
 
 export const metadata: Metadata = {
   title: {
@@ -21,10 +22,18 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <header className="flex bg-gray-200 p-4 justify-center">
-          <p className="flex-1">
-            <Link href="/">This is NavBar</Link>
+          <p className="flex-1 ">
+            <Link
+              href="/"
+              className="border-2 border-black rounded-lg px-4 py-2"
+            >
+              This is NavBar
+            </Link>
           </p>
-          <NavLinks />
+          <div className="hidden md:block">
+            <NavLinks />
+          </div>
+          <Menu className="block md:hidden" />
         </header>
         <div className="min-h-screen border-2 border-black box-border">
           {children}

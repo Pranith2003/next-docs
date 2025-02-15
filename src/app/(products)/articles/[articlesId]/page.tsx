@@ -1,15 +1,18 @@
 import Link from "next/link";
 
-export default function Arcticles({
+export default async function Articles({
   params,
   searchParams,
 }: {
-  params: { articlesId: string };
-  searchParams: { lang?: "en" | "fr" | "sp" };
+  params: Promise<{ articlesId: string }>;
+  searchParams?: Promise<{ lang?: "en" | "fr" | "sp" }>;
 }) {
-  const { articlesId } = params;
-  const { lang = "en" } = searchParams;
-  console.log(articlesId);
+  const resolvedParams = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+
+  const { articlesId } = resolvedParams;
+  const lang = resolvedSearchParams.lang || "en";
+
   return (
     <>
       <h1 className="font-bold items-center">Articles</h1>
@@ -18,8 +21,7 @@ export default function Arcticles({
         <p>Selected Language: {lang}</p>
       </div>
       <hr />
-
-      <p>Other langauges: </p>
+      <p>Other languages:</p>
       <ul>
         <li>
           <Link href={`/articles/${articlesId}?lang=en`}>English</Link>

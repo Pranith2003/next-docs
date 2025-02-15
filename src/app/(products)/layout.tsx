@@ -1,9 +1,7 @@
 import { Metadata } from "next";
-import { Suspense } from "react";
 import "./global.css";
 import Link from "next/link";
 import { NavLinks } from "./navlinks";
-import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: {

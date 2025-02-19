@@ -2,12 +2,13 @@ import Image from "next/image";
 import wondersImages, { WonderImage } from "../../../wonders";
 import Modal from "@/components/modal";
 
-export default function PhotoModal({
-  params: { id },
+export default async function PhotoModal({
+  params,
 }: {
-  params: { id: string };
+  params: Promise<string>;
 }) {
-  const photo: WonderImage = wondersImages.find((p) => p.id === id)!;
+  const photoId = await params;
+  const photo: WonderImage = wondersImages.find((p) => p.id === photoId)!;
 
   return (
     <Modal>

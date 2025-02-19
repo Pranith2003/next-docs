@@ -20,6 +20,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <html lang="en" suppressHydrationWarning> */}
       <body>
         <header className="flex bg-gray-200 p-4 justify-center">
           <p className="flex-1 ">

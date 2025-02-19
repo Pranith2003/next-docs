@@ -8,9 +8,9 @@ export default function NotFound() {
   const productId = pathname.split("/")[2];
   const reviewId = pathname.split("/")[4];
   return (
-    <>
+    <div>
       <h2>{productId} Review Not Found</h2>
       <p>Could not find selected Review id: {reviewId} </p>
-    </>
+    </div>
   );
 }

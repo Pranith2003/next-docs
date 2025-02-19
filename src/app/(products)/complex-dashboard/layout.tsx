@@ -1,33 +1,34 @@
 // using slots folders for parallel fetching/routing
+export const metadata = {
+  title: "Admin DashBoard",
+  description: "DashBoard 2.0",
+};
 
 export default function ComplexDashboardLayout({
   children,
   notifications,
   revenue,
   users,
-  // archived,
 }: {
   children: React.ReactNode;
   notifications: React.ReactNode;
-  // archived: React.ReactNode;
   revenue: React.ReactNode;
   users: React.ReactNode;
 }) {
-  // console.log(notifications);
   return (
-    <>
-      <div>{children}</div>
+    <div>
+      {children}
       <div className="flex w-full flex-col md:flex-row">
         <div className="flex flex-col">
           <div>{users}</div>
           <div>{revenue}</div>
         </div>
-        <div className="flex flex-1">
+        <div className="flex flex-auto">
           {notifications}
           {/* {archived} */}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

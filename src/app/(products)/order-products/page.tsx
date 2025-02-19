@@ -1,19 +1,19 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-const delay = async () => {
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("Intentional Delay");
-    }, 2000);
-  });
-};
+// const delay = async () => {
+//   await new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("Intentional Delay");
+//     }, 2000);
+//   });
+// };
 
 export default function OrderProducts() {
   const router = useRouter();
   const handleClick = async () => {
     alert("Your order has been placed");
-    delay();
+    // delay();
     router.push("/");
   };
   return (

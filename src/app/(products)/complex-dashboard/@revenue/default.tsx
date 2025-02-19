@@ -5,7 +5,7 @@ export default function RevenueMetricsDefault() {
     <Card>
       <div className="text-center p-4">
         <p className="animate-pulse text-gray-500">
-          Loading Revenue Metrics...
+          Default Revenue Metrics
         </p>
       </div>
     </Card>

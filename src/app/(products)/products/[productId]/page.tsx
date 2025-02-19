@@ -11,12 +11,13 @@ export const generateMetadata = async ({
 }: Props): Promise<Metadata> => {
   const id = (await params).productId;
 
-  const title = await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(`iPhone ${id}`);
-    }, 0);
-  });
+  // const title = await new Promise((resolve) => {
+  //   setTimeout(() => {
+  //     resolve(`iPhone ${id}`);
+  //   }, 0);
+  // });
 
+  const title = `iPhone ${id}`;
   return {
     title: `Product ${title}`,
   };

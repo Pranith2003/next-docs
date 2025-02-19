@@ -4,5 +4,5 @@ export default function NotificationsLayout({
   children: React.ReactNode;
 }) {
   console.log(children);
-  return <div>{children}</div>;
+  return <>{children}</>;
 }

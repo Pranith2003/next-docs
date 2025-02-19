@@ -7,7 +7,7 @@ const navLinks = [
   { id: 1, href: "/products", title: "Products" },
   { id: 2, href: "/blog", title: "Blog" },
   { id: 3, href: "/order-products", title: "Orders" },
-  // { id: 4, href: "/products/1/review", title: "Reviews" },
+  { id: 4, href: "/photo-feed", title: "Gallery" },
   { id: 5, href: "/register", title: "Get Started" },
 ];
 
